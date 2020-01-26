@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgb(240, 206, 177, 0.8),
+    rgb(231, 177, 133)
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.report-card {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  background-color: #ffc798;
+  width: 80%;
+  height: 85vh;
+  margin-left: 10%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  display: block;
+  transform-origin: bottom;
+  animation: slideDown 1.3s forwards ease-in-out;
+}
+
+.report-card > .heading {
+  color: #3f3329;
+  width: 60%;
+  margin-right: 15%;
+  margin-top: 10%;
+  float: right;
+}
+.report-card > .heading > p {
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 3.2em;
+  animation: showitscore 1.3s forwards;
+  opacity: 0;
+  animation-delay: 1.5s;
+}
+
+.start {
+  text-decoration: none;
+  animation: showitscore 1.3s forwards;
+  opacity: 0;
+  animation-delay: 1.8s;
+  transform: all 2s ease;
+}
+
+.start:hover {
+  transform: translate(-1px, -1px);
+}
+
+.start > div {
+  background: #f16a58;
+  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3), -4px -4px 4px #ffcfa7;
+  border-radius: 30px;
+  width: 10em;
+  height: 3.5em;
+  color: white;
+  font-family: "Poppins";
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10%;
+  line-height: 3.5em;
+}
+
+.video {
+  text-decoration: none;
+  float: right;
+  margin-top: 2%;
+  animation: showitscore 1.3s forwards;
+  opacity: 0;
+  animation-delay: 1.8s;
+}
+
+.video:hover {
+  transform: translate(-1px, -1px);
+}
+
+.video > div {
+  display: flex;
+  background: #f4c997;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25),
+    -4px -4px 8px rgba(250, 213, 170, 0.75);
+  border-radius: 30px;
+  width: 15em;
+  justify-content: space-evenly;
+  height: 3.5em;
+  color: #3f3329;
+  font-family: "Poppins";
+  font-weight: 600;
+  text-align: center;
+  line-height: 3.5em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.video > div > span {
+  margin-top: 0.5em;
+  padding-left: 10px;
+}
+
+.play {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.index {
+  width: 18%;
+  height: 88vh;
+  background-color: #3f3329;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 30px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: calc(10% - 2%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1%;
+  transform-origin: bottom;
+  animation: slideDown2 1.3s forwards;
+}
+.index > .total-score {
+  font-family: "Poppins";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  padding: 50px 20px 50px 20px;
+  opacity: 0;
+  animation: showitscore 1s forwards;
+  animation-delay: 1s;
+}
+.index > .total-score > p {
+  align-self: flex-start;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.index > .total-score > h1 {
+  font-weight: 800;
+  font-size: 3em;
+}
+.index > .total-score > hr {
+  margin-top: 10%;
+  width: 15%;
+  border: 2px solid #7b6450;
+}
+
+.index-content {
+  align-self: flex-start;
+  padding-left: 15%;
+  color: white;
+  font-weight: 300;
+  font-family: "Poppins";
+  opacity: 0;
+  animation: showitscore 1.3s forwards;
+  animation-delay: 1.4s;
+}
+
+.index-content > p {
+  font-weight: 500;
+  font-size: 2em;
+}
+
+.index-content > ul {
+  list-style-type: none;
+}
+
+.index-content > ul > li > a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.61);
+}
+
+.index-content > ul > li > a:hover {
+  text-decoration: none;
+  color: #f16a58;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: scaleY(0);
+  }
+  50% {
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes slideDown2 {
+  0% {
+    transform: scaleY(0);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes showitscore {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX();
+  }
+}
